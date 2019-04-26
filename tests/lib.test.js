@@ -40,11 +40,22 @@ describe('getCurrencies', () =>{
     // expect(result.length).toBe(3);
 
     // Proper way
-    expect(result).toContain('USD');
-    expect(result).toContain('AUD');
-    expect(result).toContain('EUR');
+    // expect(result).toContain('USD');
+    // expect(result).toContain('AUD');
+    // expect(result).toContain('EUR');
 
     // Ideal way
     expect(result).toEqual(expect.arrayContaining(['EUR', 'USD', 'AUD']));
   })
+});
+
+describe('getProduct', () => {
+  it('should return the product with the given id', () => {
+    const result = lib.getProduct(1);
+    expect(result).toEqual({ id: 1, price: 10});
+   
+    expect(result).toMatchObject({id: 1, price: 10}); // this is used when we don't want to list all the object properties
+
+    expect(result).toHaveProperty('id', 1);
+  });
 });
