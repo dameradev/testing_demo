@@ -13,9 +13,9 @@ module.exports.greet = function(name) {
 }
 
 // // Testing arrays 
-// module.exports.getCurrencies = function() { 
-//   return ['USD', 'AUD', 'EUR'];
-// }
+module.exports.getCurrencies = function() { 
+  return ['USD', 'AUD', 'EUR'];
+}
 
 // // Testing objects 
 // module.exports.getProduct = function(productId) { 
